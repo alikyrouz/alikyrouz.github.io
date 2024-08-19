@@ -11,6 +11,7 @@ profile:
   more_info: >
     <p>Wellesley College '25</p>
     <p>Data Science & English Literature</p>
+    <p> she/her </p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
