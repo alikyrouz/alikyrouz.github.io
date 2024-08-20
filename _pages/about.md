@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Wellesley College '25</p>
+    <p style = "color:real-purple-color">Wellesley College '25</p>
     <p>ak119[at]wellesley[dot]edu</p>
     <p> she/her </p>
 
@@ -17,7 +17,7 @@ news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-I am currently an undergraduate at Wellesley College. I am interested in interdisciplinary possibilities in the intersection of computer science and the humanities, including computational humanities as well as alternative applications of literary theory. 
+I am currently an undergraduate at Wellesley College. I'm interested in interdisciplinary possibilities in the intersection of computer science and the humanities, including computational humanities as well as alternative applications of literary theory. 
 
 During my senior year at Wellesley, I am composing an Honors thesis in the English Department considering the role of the speaker in Romantic lyric poetry alongside contemporary relationships to text produced by generative AI. 
 
