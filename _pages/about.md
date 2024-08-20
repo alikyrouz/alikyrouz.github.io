@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p style = "color:real-purple-color">Wellesley College '25</p>
+    <p>Wellesley College '25</p>
     <p>ak119[at]wellesley[dot]edu</p>
     <p> she/her </p>
 
