@@ -37,7 +37,9 @@ layout: default
         {% endif %}
       </div>
     {% endif %}
+    <div class="clearfix">{{ content }}</div>
 
+<!-- goodreads widget -->
 	<style>
 #gr_updates_widget{
 border-radius: 5px;
@@ -77,7 +79,6 @@ float:left;
 	</div>
 
 
-    <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
