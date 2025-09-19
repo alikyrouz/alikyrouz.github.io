@@ -1,0 +1,114 @@
+/* tesing scss file -- nvm
+*/
+
+body {
+  padding: 25px;
+  background-color: lavender;
+  color: black;
+  font-size: 25px;
+  font-family:serif;
+  background-image: url(_assets/purple-dithered.png);
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.element{
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  position: absolute;
+}
+
+.element img {
+  width: 100%;
+  height: auto;
+}
+
+/* from ribo.zone */ 
+.element span {
+  opacity: 0;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-size: 2.3rem;
+  color: #FFF;  /* probably set this to inherit from theme*/
+  filter: drop-shadow(1px 1px 0 black) 
+    drop-shadow(-1px 1px 0 black)
+    drop-shadow(1px -1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+}
+.element:hover span, .element:focus span {
+  opacity: 1;
+}
+.element:hover img, .element:focus img {
+  /* add hover effects like transform or filter to your images here! */
+  /*transform: rotate(3deg)  */ /* i don't love the rotate effect -- change? */
+  filter: sepia(60%);
+}
+
+
+
+/* this is used by light switch (toggleTheme()) */
+.dark-mode {
+  background-color: indigo; /* change this to work with img background :) */
+  color: slategrey;
+}
+
+/* deciding between two grid options --
+ might not be using either */
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: transparent;
+  background-image: url(_assets/bookshelfcanva.png);
+  background-size:scale-down;
+  padding: 10px;
+}
+
+.container > div{
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 20px;
+  text-align: center;
+}
+/* ------------- */
+
+/* second container option */
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div{
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+
+}
+/* --------------*/
+
+
+
+
+#light-toggle {
+  /*background-image: url(_assets/lightswitch-dithered.png); */
+  border-style: none;
+  background-size: contain;
+  width: 73px;
+  height: 100px;
+} 
+
+#floor {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 15vw;
+  display: block;
+ object-fit: cover;
+  z-index: -1;
+}
