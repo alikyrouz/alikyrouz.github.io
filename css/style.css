@@ -7,7 +7,7 @@ body {
   color: black;
   font-size: 25px;
   font-family:serif;
-  background-image: url(_assets/purple-dithered.png);
+  background-image: url(../_assets/purple-dithered.png);
 }
 
 div {
