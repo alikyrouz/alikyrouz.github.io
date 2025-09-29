@@ -1,13 +1,44 @@
 /* tesing scss file -- nvm
 */
 
+* {
+    image-rendering: pixelated;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: cadetblue gainsboro;
+    overscroll-behavior: none;
+}
+
+header {
+  width: fit-content;
+  padding: 10px;
+  margin: 10px auto -7px auto;
+  text-wrap: balance;
+  position: relative;
+  z-index: 100;
+}
+
+h1 {
+  position: relative;
+  margin:0;
+  text-align: left;
+}
+
+main {
+display: block;
+unicode-bidi: isolate;
+}
+
 body {
-  padding: 25px;
-  background-color: lavender;
-  color: black;
-  font-size: 25px;
+  padding: 2vw;
+  background-color: lavender; /*  background color isn't really used bc there's a background image*/
+  color: slategrey;
+  font-size: 2vw;
   font-family:serif;
   background-image: url(../_assets/purple-dithered.png);
+  overflow-x: hidden;
+  display: block;
 }
 
 div {
@@ -54,9 +85,10 @@ div {
 
 
 /* this is used by light switch (toggleTheme()) */
-.dark-mode {
-  background-color: indigo; /* change this to work with img background :) */
-  color: slategrey;
+.light-mode {
+  background-color: indigo; /* uses image background instead */
+  color: black;
+  background-image: url(../_assets/light-purple-dithered.png);
 }
 
 /* deciding between two grid options --
@@ -98,16 +130,17 @@ div {
   /*background-image: url(_assets/lightswitch-dithered.png); */
   border-style: none;
   background-size: contain;
-  width: 73px;
-  height: 100px;
+  width: 4vw;
+  bottom: 35vw;
 } 
 
 #floor {
   position: fixed;
   left: 0;
-  bottom: 0;
+  /*top: 45vw; */
+  bottom: 0vw;
   width: 100vw;
-  height: 15vw;
+  height: 10vw;
   display: block;
  object-fit: cover;
   z-index: -1;
