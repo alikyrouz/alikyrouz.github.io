@@ -1,5 +1,147 @@
-/* tesing scss file -- nvm
-*/
+
+/*defining dark and light mode variables -- im thinking dark mode should be default */
+
+
+:root{
+  --text: slategrey;
+  --bg: url(../_assets/purple-dithered.png);
+  --shelf: url(../_assets/DARKMODEbookshelfcanva.png);
+  --switch: url(../_assets/DARKMODELight-switch.jpg);
+  --about: url(../_assets/DARKMODEcanvabook1.png);
+  --carpet: url(../_assets/DARKMODEcarpet.jpg);
+  --border: #564C4D;
+  --border2: #232023;
+}
+
+[data-theme="light"]{
+  --text: black;
+  --bg: url(../_assets/LIGHTMODEpurple-dithered.png);
+  --shelf: url(../_assets/LIGHTMODEbookshelfcanva.png);
+  --switch: url(../_assets/LIGHTMODELight-switch.jpg);
+  --about: url(../_assets/LIGHTMODEcanvabook1.png);
+  --carpet: url(../_assets/LIGHTMODEcarpet.jpg);
+  --border:  #564C4D;
+  --border2: #232023;
+}
+
+
+  .halftone {
+    
+    /*filter: brightness(0.8) blur(3px) contrast(999); */
+  }
+  .halftone::after {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(10px at center, black, white),
+      radial-gradient(10px at 5px 5px, cyan, white),
+      radial-gradient(10px at 15px 5px, magenta, white),
+      radial-gradient(10px at 10px 15px, yellow, white);
+    /* background-size: 20px 20px; */
+    background-blend-mode: multiply;
+    mix-blend-mode: screen;
+  }
+
+  #border {
+  background-color: var(--border);
+  position: fixed;
+  bottom: 10.1vw;
+  left: 0vw;
+  width: 101vw;
+  height: 2vw;
+  z-index: -2;
+}
+
+/* end of variables happening*/
+
+#shelf {
+  background-image: var(--shelf);
+  background-size: contain;
+  position: absolute;
+	bottom: 8vw; 
+  left: 25vw;
+  width: 35vw;
+  height: 27vw;
+}
+
+#about_book {
+  background-image: var(--about);
+  background-size: contain;
+  width: 6.1vw;
+  height: 6.5vw; 
+  bottom: 18.3vw; 
+  left: 1vw
+}
+
+#light-toggle {
+  background-image: var(--switch);
+  background-size: contain;
+  width: 4vw;
+  height: 5.5vw;
+  bottom: 35vw;
+} 
+
+#floor {
+  background-image: var(--carpet);
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  /*top: 45vw; */
+  bottom: 0vw;
+  width: 100vw;
+  height: 11vw;
+  z-index: -3;
+}
+
+
+
+#border2 {
+  filter:blur(2px);
+  background-color: var(--border2);
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 0.3vw;
+  z-index: -1;
+}
+
+
+.elem{
+  border-style: none;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  position: absolute;
+}
+
+.elem img {
+  width: 100%;
+  height: auto;
+}
+
+/* from ribo.zone */ 
+.elem span {
+  opacity: 0;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.3rem;
+  color: #FFF;  /* probably set this to inherit from theme*/
+  filter: drop-shadow(1px 1px 0 black) 
+    drop-shadow(-1px 1px 0 black)
+    drop-shadow(1px -1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+}
+.elem:hover span, .elem:focus span{
+  opacity: 1;
+}
+a.elem:hover, a.elem:focus{
+  /* add hover effects like transform or filter to your images here! */
+  /*transform: rotate(3deg)  */ /* i don't love the rotate effect -- change? */
+  filter: sepia(60%);
+}
+
 
 * {
     image-rendering: pixelated;
@@ -15,8 +157,10 @@ header {
   padding: 10px;
   margin: 10px auto -7px auto;
   text-wrap: balance;
-  position: relative;
+  position: absolute;
   z-index: 100;
+  display: block;
+  bottom: 42vw;
 }
 
 h1 {
@@ -33,11 +177,12 @@ unicode-bidi: isolate;
 body {
   padding: 2vw;
   background-color: lavender; /*  background color isn't really used bc there's a background image*/
-  color: slategrey;
+  color: var(--text);
   font-size: 2vw;
   font-family:serif;
-  background-image: url(../_assets/purple-dithered.png);
-  overflow-x: hidden;
+  background-image: var(--bg);
+  background-size: 100vw 100vh;
+  overflow-y: hidden;
   display: block;
 }
 
@@ -46,49 +191,13 @@ div {
   unicode-bidi: isolate;
 }
 
-.element{
-  width: fit-content;
-  height: fit-content;
-  display: inline-block;
-  position: absolute;
-}
 
-.element img {
-  width: 100%;
-  height: auto;
-}
-
-/* from ribo.zone */ 
-.element span {
-  opacity: 0;
-  position: absolute;
-  top: 140%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99;
-  font-size: 2.3rem;
-  color: #FFF;  /* probably set this to inherit from theme*/
-  filter: drop-shadow(1px 1px 0 black) 
-    drop-shadow(-1px 1px 0 black)
-    drop-shadow(1px -1px 0 black)
-    drop-shadow(-1px -1px 0 black);
-}
-.element:hover span, .element:focus span {
-  opacity: 1;
-}
-.element:hover img, .element:focus img {
-  /* add hover effects like transform or filter to your images here! */
-  /*transform: rotate(3deg)  */ /* i don't love the rotate effect -- change? */
-  filter: sepia(60%);
-}
-
-
-
+/* I THINK THIS HAS TO CHANGE AAAAAAAAAAAAA*/
 /* this is used by light switch (toggleTheme()) */
 .light-mode {
   background-color: indigo; /* uses image background instead */
   color: black;
-  background-image: url(../_assets/light-purple-dithered.png);
+  background-image: url(../_assets/LIGHTMODEpurple-dithered.png);
 }
 
 /* deciding between two grid options --
@@ -122,26 +231,3 @@ div {
 
 }
 /* --------------*/
-
-
-
-
-#light-toggle {
-  /*background-image: url(_assets/lightswitch-dithered.png); */
-  border-style: none;
-  background-size: contain;
-  width: 4vw;
-  bottom: 35vw;
-} 
-
-#floor {
-  position: fixed;
-  left: 0;
-  /*top: 45vw; */
-  bottom: 0vw;
-  width: 100vw;
-  height: 10vw;
-  display: block;
- object-fit: cover;
-  z-index: -1;
-}

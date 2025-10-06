@@ -11,7 +11,8 @@
     <link href="_css/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
 
-  <body>
+  <body data-theme="dark">
+    
     <header>
     <h1> oops welcome to ali's very under-construction website</h1>
     <!--
@@ -36,13 +37,13 @@
     also a <a href="site_info/site_map.html"> site map</a> will exist.
   </p>
 </header>
+
 <main>
-  <a id = "light-toggle" onclick="toggleTheme()" 
-    class="element" style="z-index: 3;">
-    <img src="_assets/lightswitch-dithered.png" alt="lights">
+
+  <a id = 'light-toggle' class='elem' onclick='toggleTheme()'>
     <span>hit the lights?</span>
   </a>
-</main>
+
   <!--
   <div style="background: url(_assets/bookshelfcanva.png);
 		position: absolute; background-size: 75%;
@@ -51,56 +52,33 @@
 	</div>
   -->
 
-  <img src="_assets/bookshelfcanva.png" 
-  style="position: absolute;
-		bottom: 6.98vw; left: 15.625vw;
-		width: 61.188vw; height: 30.375vw;">
+  <div id= 'shelf'>
   
-  <a id = 'about_book' class = 'element' href="about/about.html" 
-  style="width: 6.1vw; 
- bottom: 24.75vw; left: 19.2vw"> 
-    <img src="_assets/canvabook1.png" alt="">
+  <a id = 'about_book' class = 'elem' href="about/about.html"> 
     <span>about me</span>
   </a>
 
-  
-<!-- bookshelf top: 17.8vw; book  top: 22.5vw-->
+  <div id = 'border2' style = 'bottom: 11.4vw;'></div>
 
-  <!--
-  <div class="container">
+  <div id = 'border' class="halftone"> </div>
 
-    <div><a id = "light-toggle" onclick="toggleTheme()" 
-    class="imgtxt">
-    <span>hit the lights?</span>
-    </a>
-  
-    </div>
-
-    <div> <a href="about/about.html"> personal info</a> </div>
-
-    <div> <a href="site_info/credit_sources.html"> site info</a> </div>  
-
-    <div> <a href="code/projects.html"> code and stuff</a> </div>
-
-    <div> <a href="fun/fun.html"> fun other things</a> </div>
-
-  </div>
-  -->
-   
+  <div id = 'border2' style = 'bottom: 10.4vw;'></div>
 
 
-  <!--<img src="assets/carpet.jpg"> -->
+ </main>  
+
   </body>
 
-  <img id = "floor" src = "_assets/night-sky-carpet-none-g6cit9-1200.jpg"></img>
+  <div id = "floor">
 
   
   
 
   <script>
 function toggleTheme() {
-   var b = document.body;
-   b.classList.toggle("light-mode");
+  var body = document.body
+  const currentTheme = body.getAttribute('data-theme');
+  body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
 }
 </script>
 
