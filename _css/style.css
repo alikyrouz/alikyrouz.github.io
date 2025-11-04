@@ -1,67 +1,121 @@
 
-/*defining dark and light mode variables -- im thinking dark mode should be default */
+/*defining dark and light mode variables -- im thinking dark mode should be default
+
+IMPORT FONT
+
+*/
+
+@import "allcolors.css";
+
 
 
 :root{
-  --text: slategrey;
-  --bg: url(../_assets/purple-dithered.png);
-  --shelf: url(../_assets/DARKMODEbookshelfcanva.png);
-  --switch: url(../_assets/DARKMODELight-switch.jpg);
-  --about: url(../_assets/DARKMODEcanvabook1.png);
-  --carpet: url(../_assets/DARKMODEcarpet.jpg);
-  --border: #564C4D;
-  --border2: #232023;
+  --text: var(--textd);
+  --bg: var(--pink4d);
+  --shelf: url(../_assets/bookshelf_dark.png);
+  --switch: url(../_assets/lightswitch_dark.jpg);
+  --window: url(../_assets/window_dark.png);
+  /*--about: url(../_assets/DARKMODEcanvabook1.png);
+  /*--carpet: url(../_assets/DARKMODEcarpet.jpg);*/
+  --carpet: url(../_assets/carpet_dark.jpg);/* var(--red1d); */
+ /* --border: url(../_assets/border1.png);
+  --borderx: #564C4D;
+  --border2: #232023; */
+  --border: var(--purple3d);
+  --lamp: url(g);
+  --shadow: var(--pink5d);
+ /* --poster1: url(../_assets/poster1also.png) */
+--about_bg: var(--pink5d);
 }
 
 [data-theme="light"]{
-  --text: black;
-  --bg: url(../_assets/LIGHTMODEpurple-dithered.png);
-  --shelf: url(../_assets/LIGHTMODEbookshelfcanva.png);
-  --switch: url(../_assets/LIGHTMODELight-switch.jpg);
-  --about: url(../_assets/LIGHTMODEcanvabook1.png);
-  --carpet: url(../_assets/LIGHTMODEcarpet.jpg);
-  --border:  #564C4D;
-  --border2: #232023;
+  --text: var(--textl);
+  --bg: var(--pink4l);
+  --shelf: url(../_assets/bookshelf_light.png);
+  --switch: url(../_assets/lightswitch_light.jpg);
+  --window: url(../_assets/window_light.png);
+  /*--about: url(../_assets/LIGHTMODEcanvabook1.png); */
+  /*--carpet: url(../_assets/LIGHTMODEcarpet.jpg);*/
+    /*--carpet: var(--red1l); */
+    --carpet: url(../_assets/carpet_light.jpg);
+ /* --border: url(../_assets/border1.png);
+  --border2: #232023; */
+  --border: var(--purple3l);
+  --shadow: var(--pink5l);
+  --about_bg: var(--pink5l);
+
+  /*--poster1: url(../_assets/poster1.png) */
+}
+/* end of variables happening*/
+
+
+#poster1 {
+  background-image: var(--poster1);
+  background-size: contain;
+  position: absolute;
+  width: 12vw;
+  height: 8vw;
+  left: 75vw;
+  bottom: 27vw;
+ /* box-shadow: 0px 4px 4px rgba(0,0,0,0.3); */
+}
+
+#lamp{
+  background-image: var(--lamp);
+  background-size: contain;
+  position: absolute;
+  width: 10vw;
+  height: 15vw;
+  left: 5vw;
+  bottom: 10vw;
 }
 
 
-  .halftone {
-    
-    /*filter: brightness(0.8) blur(3px) contrast(999); */
-  }
-  .halftone::after {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(10px at center, black, white),
-      radial-gradient(10px at 5px 5px, cyan, white),
-      radial-gradient(10px at 15px 5px, magenta, white),
-      radial-gradient(10px at 10px 15px, yellow, white);
-    /* background-size: 20px 20px; */
-    background-blend-mode: multiply;
-    mix-blend-mode: screen;
-  }
+#window{
+  background-image: var(--window);
+  background-size: contain;
+  position: absolute;
+  width: 25vw;
+  height: 12vw;
+  left: 55vw;
+  bottom: 35vw;
+
+}
 
   #border {
+  /*background-image: var(--border);
+  background-size: cover; */
   background-color: var(--border);
-  position: fixed;
+  position: absolute;
+ /* box-shadow: 0px 4px 4px rgba(0,0,0,0.6); */
   bottom: 10.1vw;
   left: 0vw;
-  width: 101vw;
+  width: 100vw;
   height: 2vw;
-  z-index: -2;
+  z-index: -1;
 }
 
-/* end of variables happening*/
 
 #shelf {
   background-image: var(--shelf);
   background-size: contain;
   position: absolute;
+ /* box-shadow: -100px 20px 4px rgba(0,0,0,0.4), -100px 200px 4px rgba(0,0,0,0.4); */
 	bottom: 8vw; 
-  left: 25vw;
-  width: 35vw;
-  height: 27vw;
+  left: 17vw;
+  width: 30.6vw;
+  height: 23.5vw;
+  z-index: 2;
+}
+
+div::after{
+  content: "";
+  position: absolute;
+  transform: skewX(300deg);
+  left: 27%;
+  height: 20%;
+  width:38%;
+  /*box-shadow: 0px 25px 9px 0 rgba(0,0,0, .8), -90px 15px 4px 0 rgba(0,0,0, .8); */
 }
 
 #about_book {
@@ -76,14 +130,15 @@
 #light-toggle {
   background-image: var(--switch);
   background-size: contain;
-  width: 4vw;
-  height: 5.5vw;
+  width: 3.2vw;
+  height: 4.5vw;
   bottom: 35vw;
 } 
 
 #floor {
   background-image: var(--carpet);
-  background-size: cover;
+  background-size: cover; 
+  /*background-color: var(--carpet); */
   position: fixed;
   left: 0;
   /*top: 45vw; */
@@ -105,6 +160,66 @@
   z-index: -1;
 }
 
+#shelf_shadow_v_d{
+  background-color: var(--shadow);
+  position: fixed;
+  width: 2.5vw;
+  height: 27vw;
+  left: 14.6vw;
+  bottom: 4vw;
+  transform: skewY(340deg);
+}
+
+#shelf_shadow_h_d{
+  background-color: var(--shadow);
+  position: fixed;
+  width: 32.6vw;
+  height: 7vw;
+  left: 10.8vw;
+  bottom: 1vw;
+  transform: skewX(310deg);
+}
+
+/*hidden when [data-theme="light"]*/
+[data-theme="light"] #shelf_shadow_v_d,
+[data-theme="light"] #shelf_shadow_h_d {
+  display: none; 
+}
+
+
+#shelf_shadow_v_l{
+  background-color: var(--shadow);
+  position: fixed;
+  width: 2.5vw;
+  height: 25vw;
+  left: 47.6vw;
+  bottom: 8vw;
+}
+
+#shelf_shadow_h_l{
+  background-color: var(--shadow);
+  position: fixed;
+  width: 32.1vw;
+  height: 1.5vw;
+  left: 17.5vw;
+  bottom: 31.5vw;
+  transform: skewX(150deg); 
+}
+
+/*hidden when [data-theme="dark"]*/
+[data-theme="dark"] #shelf_shadow_v_l,
+[data-theme="dark"] #shelf_shadow_h_l {
+  display: none; 
+}
+
+
+#profile_pic{
+  position: fixed;
+  width: 20vw;
+  height: auto;
+  top: 4vw;
+  right: 4vw;
+}
 
 .elem{
   border-style: none;
@@ -160,13 +275,15 @@ header {
   position: absolute;
   z-index: 100;
   display: block;
-  bottom: 42vw;
+  bottom: 45vw;
+  left: 17vw;
 }
 
 h1 {
   position: relative;
   margin:0;
   text-align: left;
+  font-size: 3vw;
 }
 
 main {
@@ -176,14 +293,12 @@ unicode-bidi: isolate;
 
 body {
   padding: 2vw;
-  background-color: lavender; /*  background color isn't really used bc there's a background image*/
   color: var(--text);
-  font-size: 2vw;
-  font-family:serif;
-  background-image: var(--bg);
-  background-size: 100vw 100vh;
-  overflow-y: hidden;
-  display: block;
+  font-size: 1.5vw;
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--bg);
 }
 
 div {
@@ -192,42 +307,4 @@ div {
 }
 
 
-/* I THINK THIS HAS TO CHANGE AAAAAAAAAAAAA*/
-/* this is used by light switch (toggleTheme()) */
-.light-mode {
-  background-color: indigo; /* uses image background instead */
-  color: black;
-  background-image: url(../_assets/LIGHTMODEpurple-dithered.png);
-}
-
-/* deciding between two grid options --
- might not be using either */
-.container{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: transparent;
-  background-image: url(_assets/bookshelfcanva.png);
-  background-size:scale-down;
-  padding: 10px;
-}
-
-.container > div{
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 20px;
-  text-align: center;
-}
-/* ------------- */
-
-/* second container option */
-.flex-container {
-  display: flex;
-}
-
-.flex-container > div{
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-
-}
 /* --------------*/
