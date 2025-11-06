@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+    <script src="themeToggle.js"></script>
+
   </head>
 
   <body data-theme="dark">
@@ -43,7 +45,7 @@
 
 <main>
 
-  <a id = 'light-toggle' class='elem' onclick='toggleTheme()'>
+  <a id = 'light-toggle' class='elem' onclick='toggleTheme()' style="z-index: 6;">
     <span>hit the lights?</span>
   </a>
 
@@ -70,7 +72,30 @@
 </b>
 
   <!-- <div id = 'border2' style = 'bottom: 11.4vw;'></div> -->
-<a id="lamp"></a>
+<a id="lamp" style="z-index: 2;"></a>
+<a id = "lamp_shadowd" class="dot" style="height: 2vw;
+  width: 5.5vw;
+  background-color: var(--shadow);
+  bottom: 7.5vw; left: -0.95vw; z-index: 1; transform: skewX(290deg)"></a>
+  <div id = 'border'> </div>
+
+<a id="lightl" class = "dot" style="z-index: 5;
+width: 85vw;
+height: 65vw;
+background-color: var(--red1l);
+opacity: 10%;
+bottom:-15vw;
+left:-15vw;
+border-radius: 50%;
+
+"></a>
+
+<a id = "lamp_shadowl" class="dot" style="
+border-radius: 50%;
+height: 2vw;
+  width: 5.5vw;
+  background-color: var(--shadow);
+  bottom: 8.5vw; left: 3vw; z-index: 1;"></a>
   <div id = 'border'> </div>
 
  <!-- <div id = 'border2' style = 'bottom: 10.4vw;'></div> -->
@@ -84,12 +109,5 @@
   
   
 
-  <script>
-function toggleTheme() {
-  var body = document.body
-  const currentTheme = body.getAttribute('data-theme');
-  body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
-}
-</script>
-
+ 
 </html>

@@ -21,11 +21,16 @@ IMPORT FONT
  /* --border: url(../_assets/border1.png);
   --borderx: #564C4D;
   --border2: #232023; */
+  --imgbg: var(--purple1d);
   --border: var(--purple3d);
-  --lamp: url(g);
+  --lamp: url(../_assets/lamp_dark.png);
   --shadow: var(--pink5d);
  /* --poster1: url(../_assets/poster1also.png) */
 --about_bg: var(--pink5d);
+--link: var(--red1d);
+--visitedlink: var(--purple1d);
+--hoverlink: var(--red3d);
+--activelink: var(--purple1d);
 }
 
 [data-theme="light"]{
@@ -40,11 +45,17 @@ IMPORT FONT
     --carpet: url(../_assets/carpet_light.jpg);
  /* --border: url(../_assets/border1.png);
   --border2: #232023; */
+   --imgbg: var(--purple1l);
   --border: var(--purple3l);
+    --lamp: url(../_assets/lamp_light.png);
   --shadow: var(--pink5l);
   --about_bg: var(--pink5l);
 
   /*--poster1: url(../_assets/poster1.png) */
+--link: var(--red1l);
+--visitedlink: var(--purple1l);
+--hoverlink: var(--red3l);
+--activelink: var(--purple1l);
 }
 /* end of variables happening*/
 
@@ -64,10 +75,10 @@ IMPORT FONT
   background-image: var(--lamp);
   background-size: contain;
   position: absolute;
-  width: 10vw;
+  width: 12vw;
   height: 15vw;
-  left: 5vw;
-  bottom: 10vw;
+  left: 0vw;
+  bottom: 7vw;
 }
 
 
@@ -187,13 +198,19 @@ div::after{
 }
 
 
+[data-theme="light"] #lamp_shadowd {
+  display: none; 
+}
+
+
 #shelf_shadow_v_l{
   background-color: var(--shadow);
   position: fixed;
   width: 2.5vw;
-  height: 25vw;
+  height: 23.9vw;
   left: 47.6vw;
-  bottom: 8vw;
+  bottom: 8.5vw;
+  transform: skewY(-25deg);
 }
 
 #shelf_shadow_h_l{
@@ -212,13 +229,22 @@ div::after{
   display: none; 
 }
 
+/*hidden when [data-theme="dark"]*/
+[data-theme="dark"] #lightl{
+  display: none; 
+}
+
+[data-theme="dark"] #lamp_shadowl{
+  display: none; 
+}
+
 
 #profile_pic{
   position: fixed;
-  width: 20vw;
+  width: 23vw;
   height: auto;
   top: 4vw;
-  right: 4vw;
+  right: 8vw;
 }
 
 .elem{
@@ -257,6 +283,33 @@ a.elem:hover, a.elem:focus{
   filter: sepia(60%);
 }
 
+
+.dot {
+  border-radius: 21%;
+  display: inline-block;
+  position: absolute;
+}
+
+a:link {
+  color: var(--link);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: var(--visitedlink);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--hoverlink);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: var(--activelink);
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 * {
     image-rendering: pixelated;
