@@ -1,8 +1,5 @@
 
-/*defining dark and light mode variables -- im thinking dark mode should be default
-
-IMPORT FONT
-
+/* hardcode home button
 */
 
 @import "allcolors.css";
@@ -15,7 +12,7 @@ IMPORT FONT
   --shelf: url(../_assets/bookshelf_dark.png);
   --switch: url(../_assets/lightswitch_dark.jpg);
   --window: url(../_assets/window_dark.png);
-  /*--about: url(../_assets/DARKMODEcanvabook1.png);
+  --about: url(../_assets/about_book_dark.png);
   /*--carpet: url(../_assets/DARKMODEcarpet.jpg);*/
   --carpet: url(../_assets/carpet_dark.jpg);/* var(--red1d); */
  /* --border: url(../_assets/border1.png);
@@ -31,6 +28,8 @@ IMPORT FONT
 --visitedlink: var(--purple1d);
 --hoverlink: var(--red3d);
 --activelink: var(--purple1d);
+--scroll: var(--purple5d);
+--cv: url(../_assets/cv_book_dark.jpg);
 }
 
 [data-theme="light"]{
@@ -39,7 +38,7 @@ IMPORT FONT
   --shelf: url(../_assets/bookshelf_light.png);
   --switch: url(../_assets/lightswitch_light.jpg);
   --window: url(../_assets/window_light.png);
-  /*--about: url(../_assets/LIGHTMODEcanvabook1.png); */
+  --about: url(../_assets/about_book_light.png);
   /*--carpet: url(../_assets/LIGHTMODEcarpet.jpg);*/
     /*--carpet: var(--red1l); */
     --carpet: url(../_assets/carpet_light.jpg);
@@ -56,6 +55,9 @@ IMPORT FONT
 --visitedlink: var(--purple1l);
 --hoverlink: var(--red3l);
 --activelink: var(--purple1l);
+--scroll: var(--purple5l);
+--cv: url(../_assets/cv_book_light.jpg);
+
 }
 /* end of variables happening*/
 
@@ -132,10 +134,21 @@ div::after{
 #about_book {
   background-image: var(--about);
   background-size: contain;
-  width: 6.1vw;
+  width: 1.442vw;
   height: 6.5vw; 
-  bottom: 18.3vw; 
-  left: 1vw
+  bottom: 16vw; 
+  left: 2vw;
+  z-index: 100;
+}
+
+#cv_book {
+    background-image: var(--cv);
+  background-size: contain;
+  width: 0.864vw;
+  height: 5.7vw; 
+  bottom: 16.05vw; 
+  left: 3.5vw;
+  z-index: 100;
 }
 
 #light-toggle {
@@ -207,9 +220,9 @@ div::after{
   background-color: var(--shadow);
   position: fixed;
   width: 2.5vw;
-  height: 23.9vw;
+  height: 23.82vw;
   left: 47.6vw;
-  bottom: 8.5vw;
+  bottom: 8.6vw;
   transform: skewY(-25deg);
 }
 
@@ -267,7 +280,7 @@ div::after{
   top: 140%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.3rem;
+  font-size: 2.3vw;
   color: #FFF;  /* probably set this to inherit from theme*/
   filter: drop-shadow(1px 1px 0 black) 
     drop-shadow(-1px 1px 0 black)
@@ -276,6 +289,8 @@ div::after{
 }
 .elem:hover span, .elem:focus span{
   opacity: 1;
+  z-index: 6;
+
 }
 a.elem:hover, a.elem:focus{
   /* add hover effects like transform or filter to your images here! */
@@ -316,7 +331,7 @@ a:active {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scrollbar-color: cadetblue gainsboro;
+    scrollbar-color: var(--scroll) gainsboro;
     overscroll-behavior: none;
 }
 
@@ -358,6 +373,7 @@ div {
   display: block;
   unicode-bidi: isolate;
 }
+
 
 
 /* --------------*/
