@@ -52,7 +52,7 @@
 
   /*--poster1: url(../_assets/poster1.png) */
 --link: var(--red1l);
---visitedlink: var(--purple1l);
+--visitedlink: var(--purple4l);
 --hoverlink: var(--red3l);
 --activelink: var(--purple1l);
 --scroll: var(--purple5l);
@@ -136,7 +136,7 @@ div::after{
   background-size: contain;
   width: 1.442vw;
   height: 6.5vw; 
-  bottom: 16vw; 
+  bottom: 15.94vw; 
   left: 2vw;
   z-index: 100;
 }
@@ -254,9 +254,9 @@ div::after{
 
 #profile_pic{
   position: fixed;
-  width: 23vw;
+  width: 28vw;
   height: auto;
-  top: 4vw;
+  top: 5vw;
   right: 8vw;
 }
 
@@ -305,6 +305,20 @@ a.elem:hover, a.elem:focus{
   position: absolute;
 }
 
+.home {}  /* this should be a home button class */
+
+.sticky {
+  background-image: url(../_assets/sticky_note.png);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block; 
+  height: 13vw;
+  width: 13vw;
+}
+
+
 a:link {
   color: var(--link);
   background-color: transparent;
@@ -343,7 +357,7 @@ header {
   position: absolute;
   z-index: 100;
   display: block;
-  bottom: 45vw;
+  top: 4vw;
   left: 17vw;
 }
 
@@ -352,6 +366,7 @@ h1 {
   margin:0;
   text-align: left;
   font-size: 3vw;
+  font-weight: 400;
 }
 
 main {
@@ -364,7 +379,7 @@ body {
   color: var(--text);
   font-size: 1.5vw;
   font-family: "Jersey 20", sans-serif;
-  font-weight: 400;
+  font-weight: 550;
   font-style: normal;
   background-color: var(--bg);
 }

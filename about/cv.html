@@ -9,9 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/pdfobject"></script>
-
+    <script src="../themeToggle.js"></script>
+    <style>
+     body{background-color: var(--about_bg);
+    }
+    </style>
   </head>
-  <body style = "background-color: var(--about_bg);"">
+  <body onload="setTheme()">
  <a href="../index.html"> go home</a>
     <h1> my resume </h1>
   
@@ -26,7 +30,7 @@
 
     
     <a href="about.html" style="display: block; position: absolute; top: 75vw"> 
-      back to main about page</a>
+      main about page</a>
   </body>
 
 </html>

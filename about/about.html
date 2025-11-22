@@ -8,45 +8,56 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+     <script src="../themeToggle.js"></script>
+    <style>
+     body{background-color: var(--about_bg);
+    }
+    </style>
   </head>
 
 <!-- ADD LIGHT/DARK MDOE FUNCTIONALITY-->
 
-  <body data-theme= 'dark' style="background-color: var(--about_bg);"">
-    <header style="position: absolute; font-size: 3vw; top: 7vw; left: 5vw">
+  <body onload=setTheme() style="background-color: var(--about_bg);">
+    <header style="position: absolute; font-size: 3vw; top: 7.5vw; left: 8vw">
     <h1 >
       hi! My name is Ali.
     </h1>
     </header>
 
-    <p style="position: absolute; width: 55vw; top: 15vw; left: 3vw; font-size: 1.8vw"> I am a recent graduate of Wellesley College, 
+    <p style="position: absolute; width: 42vw; top: 14vw; left: 7vw; font-size: 1.8vw"> I am a recent graduate of Wellesley College, 
       where I studied Data Science and English. There is a special place in my heart for 
       data analysis and computing with natural language. I especially love research 
       looking at literature and music! </p>
 
-<p style="position: absolute; width: 55vw;  top: 22vw; left: 3vw; font-size: 1.8vw">In more recent professional experience, I have done work in the fields of 
+<p style="position: absolute; width: 42vw;  top: 23vw; left: 7vw; font-size: 1.8vw">In more recent professional experience, I have done work in the fields of 
   environmental science and bioinformatics. I do ongoing work as a research assistant with the 
   New England Flying Squirrel Network, where I have been mapping species distribution and 
   predicting key habitat factors. </p>
 
-<p style="position: absolute; width: 55vw;  top: 31.5vw; left: 3vw; font-size: 1.8vw" >Alongside peers and faculty in the Wellesley Department of Computer Science, 
+<p style="position: absolute; width: 42vw;  top: 34vw; left: 7vw; font-size: 1.8vw" >Alongside peers and faculty in the Wellesley Department of Computer Science, 
   I also contributed code and exploratory analysis of machine learning applications to Popcorn,
    a method of prediction for coding ability in prokaryotic gene sequences. </p>
 
     <img src="../_assets/prof_pic.png" 
     id="profile_pic">
 
-  <a id='imgbg' role="presentation" style="position: absolute; display: block; background-color: var(--imgbg); width: 25vw; height: 29vw; top: 2.8vw; right: 7vw; border-radius: 20px; z-index: -1;">
+  <a id='imgbg' role="presentation" style="position: absolute; display: block; background-color: var(--imgbg); width: 30vw; height: 35vw; top: 3.8vw; right: 7vw; border-radius: 0.5vw; z-index: -1;">
+  </a>
+  <a id='imgbg' role="presentation" style="position: absolute; display: block; background-color: var(--imgbg); width:49vw; height: 37vw; top: 7.5vw; left: 3.25vw; border-radius: 0.5vw; z-index: -1;">
+  </a>
+  <a id='imgbg' role="presentation" style="position: absolute; display: block; background-color: var(--imgbg); width:23.9vw; height: 3vw; top: 39.5vw; right: 13.2vw; border-radius: 0.5vw; z-index: -1;">
+  </a>
+  <a id='imgbg' role="presentation" style="position: absolute; display: block; background-color: var(--imgbg); width:35vw; height: 2vw; bottom: 0.5vw; left: 3.25vw; border-radius: 0.5vw; z-index: -1;">
   </a>
 
-<p style="position: absolute; width: 26vw;  top: 33vw; right: 6vw; font-size: 1.3vw"> contact via email: ajkyrouz [at] gmail [dot] com <br>
+<p style="position: absolute; width: 26vw;  top: 39.75vw; right: 10.8vw; font-size: 1.3vw"> contact via email: ajkyrouz [at] gmail [dot] com <br>
 or check out other ways to connect with me</p>
 
-<p style="position: absolute; width: 70vw;  top: 49vw; left: 3vw; font-size: 1.3vw"> 
-For more detailed professional experience, you can view my <a href="cv.html"> resume</a>. For more personal research interests, projects or something.
+<p style="position: absolute; width: 70vw;  bottom: 1vw; left: 3.5vw; font-size: 1.3vw"> 
+For more detailed professional experience, you can view my <a href="cv.html"> resume</a>.
 </p>
 
-    <a href="../index.html"> go home</a>
+    <a class='home' href="../index.html"> go home</a>
   </body>
 
 </html>
