@@ -11,6 +11,7 @@
   --bg: var(--pink4d);
   --shelf: url(../_assets/bookshelf_dark.png);
   --switch: url(../_assets/lightswitch_dark.jpg);
+  --light_icon: "\f185"; 
   --window: url(../_assets/window_dark.png);
   --about: url(../_assets/about_book_dark.png);
   /*--carpet: url(../_assets/DARKMODEcarpet.jpg);*/
@@ -25,7 +26,7 @@
  /* --poster1: url(../_assets/poster1also.png) */
 --about_bg: var(--pink5d);
 --link: var(--red1d);
---visitedlink: var(--purple1d);
+--visitedlink: var(--pink4d);
 --hoverlink: var(--red3d);
 --activelink: var(--purple1d);
 --scroll: var(--purple5d);
@@ -37,6 +38,7 @@
   --bg: var(--pink4l);
   --shelf: url(../_assets/bookshelf_light.png);
   --switch: url(../_assets/lightswitch_light.jpg);
+  --light_icon: "\f186"; 
   --window: url(../_assets/window_light.png);
   --about: url(../_assets/about_book_light.png);
   /*--carpet: url(../_assets/LIGHTMODEcarpet.jpg);*/
@@ -305,7 +307,6 @@ a.elem:hover, a.elem:focus{
   position: absolute;
 }
 
-.home {}  /* this should be a home button class */
 
 .sticky {
   background-image: url(../_assets/sticky_note.png);
@@ -321,24 +322,45 @@ a.elem:hover, a.elem:focus{
 
 a:link {
   color: var(--link);
-  background-color: transparent;
   text-decoration: none;
 }
 a:visited {
   color: var(--visitedlink);
-  background-color: transparent;
   text-decoration: none;
 }
 a:hover {
   color: var(--hoverlink);
-  background-color: transparent;
   text-decoration: underline;
 }
 a:active {
   color: var(--activelink);
-  background-color: transparent;
   text-decoration: underline;
 }
+
+.home {
+  background-color: var(--imgbg);
+  height: 2vw;
+  width: 8vw;
+  position: absolute;
+  display: block;
+  text-align: center;
+  left: 3.5vw;
+  border-radius: 0.5vw;
+
+
+}  /* this should be a home button class */
+
+.icon::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.light_icon::before {
+  font: var(--fa-font-solid);
+  content: var(--light_icon);
+}
+
 
 * {
     image-rendering: pixelated;

@@ -16,21 +16,21 @@
     </style>
   </head>
   <body onload="setTheme()">
- <a href="../index.html"> go home</a>
-    <h1> my resume </h1>
+ <a class="home" href="../index.html"> go home</a>
+    <h1 style="top: 3vw;"> my resume </h1>
   
     <style>
-.pdfobject-container { height: 67vw; width: 65vw; border: 1px solid var(--border); }
+.pdfobject-container { height: 67vw; width: 50vw; border: 1px solid var(--border); }
   </style>
-<div id="resume-pdf" style="display: block; position:absolute; left: 17vw;"></div>
+<div id="resume-pdf" style="display: block; position:absolute; left: 17vw; top: 9vw;"></div>
 <script>PDFObject.embed("../_assets/KyrouzResumeOnlineVersion.pdf", "#resume-pdf");
 
 </script>
 
 
     
-    <a href="about.html" style="display: block; position: absolute; top: 75vw"> 
-      main about page</a>
+    <a class= "home" href="about.html" style="display: block; position: absolute; top: 80vw; width: 15vw"> 
+      return to about page</a>
   </body>
 
 </html>
