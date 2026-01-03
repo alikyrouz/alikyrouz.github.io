@@ -358,6 +358,7 @@ a:active {
 
 .light_icon::before {
   font: var(--fa-font-solid);
+  font-weight: 900;
   content: var(--light_icon);
 }
 
