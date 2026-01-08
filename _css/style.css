@@ -357,11 +357,35 @@ a:active {
 }
 
 .light_icon::before {
-  font: var(--fa-font-solid);
+  font-family: "Font Awesome 7 Free";
   font-weight: 900;
+  font-style: normal;
   content: var(--light_icon);
 }
 
+.light_icon span {
+  opacity: 0;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.3vw;
+  color: #FFF;  /* probably set this to inherit from theme*/
+  filter: drop-shadow(1px 1px 0 black) 
+    drop-shadow(-1px 1px 0 black)
+    drop-shadow(1px -1px 0 black)
+    drop-shadow(-1px -1px 0 black);
+}
+.light_icon:hover span, .light_icon:focus span{
+  opacity: 1;
+  z-index: 6;
+
+}
+i.icon light_icon:hover, i.icon light_icon:focus{
+  /* add hover effects like transform or filter to your images here! */
+  /*transform: rotate(3deg)  */ /* i don't love the rotate effect -- change? */
+  filter: sepia(60%);
+}
 
 * {
     image-rendering: pixelated;
