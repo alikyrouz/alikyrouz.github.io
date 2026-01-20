@@ -2,21 +2,21 @@
 :root{
     --pink1d: rgba(139, 92, 143, 1);
     --pink2d: rgba(111, 59, 114, 1);
-    --pink3d: rgba(84, 39, 87, 1);
-    --pink4d: rgba(69, 24, 72, 1);
+--pink3d: rgba(92, 45, 96, 1); 
+--pink4d: rgba(72, 28, 76, 1);
     --pink5d: rgba(48, 11, 51, 1);
     --red1d: rgba(193, 124, 146, 1);
     --red2d: rgba(153, 79, 105, 1);
     --red3d: rgba(117, 53, 74, 1);
-    --red4d: rgba(97, 31, 54, 1);
-    --red5d: rgba(68, 14, 32, 1);
+--red4d: rgba(102, 34, 60, 1);
+--red5d: rgba(74, 18, 40, 1);
     --purple1d: rgba(120, 100, 149, 1);
     --purple2d: rgba(88, 66, 119, 1);
     --purple3d: rgba(63, 45, 90, 1);
-    --purple4d: rgba(47, 36, 34, 1);
+--purple4d: rgba(52, 38, 78, 1);
     --purple5d: rgba(30, 15, 53, 1);
     --brown1d: rgba(47, 36, 34, 1);
     --brown2d: rgba(79, 63, 60, 1);
     --brown3d: rgba(86, 76, 77, 1);
-    --textd: rgba(255, 255, 255, 1);
+    --textd: rgba(245, 242, 248, 1);
 }

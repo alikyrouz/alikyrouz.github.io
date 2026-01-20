@@ -1,23 +1,22 @@
 :root{
-
---pink1l: rgba(116, 75, 119, 1);
---pink2l: rgba(169, 118, 173, 1);
---pink3l: rgba(139, 80, 114, 1);
---pink4l: rgba(157, 120, 221, 1);
---pink5l: rgba(87, 29, 91, 1);
---red1l: rgba(253, 189, 211, 1);
---red2l: rgba(131, 53, 79, 1);
---red3l: rgba(213, 138, 164, 1);
---red4l: rgba(154, 63, 94, 1);
---red5l: rgba(123, 38, 66, 1);
---purple1l: rgba(184, 166, 211, 1);
---purple2l: rgba(147, 126, 179, 1);
---purple3l: rgba(113, 89, 149, 1);
---purple4l: rgba(81, 55, 119, 1);
---purple5l: rgba(59, 35, 95, 1);
---brown1l: rgba(47, 36, 34, 1);
---brown2l: rgba(79, 63, 60, 1);
---brown3l: rgba(86, 76, 77, 1);
---textl: rgba(0, 0, 0, 1);
+--pink1l: rgba(176, 124, 168, 1);
+--pink2l: rgba(156, 102, 148, 1);
+--pink3l: rgba(136, 82, 128, 1);
+--pink4l: rgba(116, 62, 108, 1);
+--pink5l: rgba(96, 42, 88, 1);
+--red1l: rgba(232, 170, 186, 1);
+--red2l: rgba(206, 136, 158, 1);
+--red3l: rgba(176, 104, 128, 1);
+--red4l: rgba(146, 74, 98, 1);
+--red5l: rgba(116, 44, 68, 1);
+--purple1l: rgba(198, 182, 222, 1);
+--purple2l: rgba(168, 148, 198, 1);
+--purple3l: rgba(138, 116, 174, 1);
+--purple4l: rgba(108, 86, 144, 1);
+--purple5l: rgba(78, 56, 114, 1);
+    --brown1l: rgba(47, 36, 34, 1);
+    --brown2l: rgba(79, 63, 60, 1);
+    --brown3l: rgba(86, 76, 77, 1);
+ --textl: rgba(38, 28, 42, 1);
 }
 

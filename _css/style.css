@@ -14,7 +14,7 @@
   --switch: url(../_assets/lightswitch_dark.jpg);
   --light_icon: "\f185"; 
   --window: url(../_assets/window_dark.png);
-  --about: url(../_assets/about_book_dark.png);
+  --about: url(../_assets/about_book_dark_test.png);
   /*--carpet: url(../_assets/DARKMODEcarpet.jpg);*/
   --carpet: url(../_assets/carpet_dark.jpg);/* var(--red1d); */
  /* --border: url(../_assets/border1.png);
@@ -32,7 +32,11 @@
 --activelink: var(--purple1d);
 --scroll: var(--purple5d);
 --cv: url(../_assets/cv_book_dark.jpg);
---map:url(../_assets/map_dark.png);
+--map:url(../_assets/map_frame_dark.png);
+--outlet: url(../_assets/cord_dark.png);
+--laptop: url(../_assets/laptop_dark.png);
+--shelfFront: var(--red2d);
+--contact_bg: url(../_assets/contact_bg_dark.png);
 }
 
 [data-theme="light"]{
@@ -61,7 +65,11 @@
 --activelink: var(--purple1l);
 --scroll: var(--purple5l);
 --cv: url(../_assets/cv_book_light.jpg);
---map:url(../_assets/map_light.png);
+--map:url(../_assets/map_frame_light.png);
+--outlet: url(../_assets/cord_light.png);
+--laptop: url(../_assets/laptop_light.png);
+--shelfFront: var(--red2l);
+--contact_bg: url(../_assets/contact_bg_light.png);
 
 
 }
@@ -85,13 +93,25 @@
   position: absolute;
   left: 31vw;
   top: 7vw;
-  width: 17vw;
-  height: 13vw;
+  width: 16.2vw;
+  height: 12.3vw;
   box-shadow: 0px 4px 8px var(--shadow);
 }
 
+
 [data-theme="light"] #map{
    box-shadow: 1px -1px 8px var(--shadow);
+}
+
+#laptop{
+  background-image: var(--laptop);
+  background-size: contain;
+  position: absolute;
+  width: 12vw;
+  height: 8vw;
+  left: 21vw;
+  bottom: 30.6vw;
+  z-index: 30;
 }
 
 #lamp{
@@ -193,6 +213,16 @@ div::after{
   z-index: -3;
 }
 
+#outlet {
+  background-image: var(--outlet);
+  background-size: cover;
+  position: fixed;
+  left: -1vw;
+  bottom: 10vw;
+  width: 8vw;
+  height: 8vw;
+  z-index: 0;
+}
 
 
 #border2 {
@@ -210,7 +240,7 @@ div::after{
   position: fixed;
   width: 2.5vw;
   height: 27vw;
-  left: 14.6vw;
+  left: 14.5vw;
   bottom: 4vw;
   transform: skewY(340deg);
 }
@@ -377,6 +407,15 @@ a:active {
   -webkit-font-smoothing: antialiased;
 }
 
+.icon {
+  color: var(--text);
+  position: relative;  
+}
+
+.icon:hover {
+  color: var(--hoverlink); 
+}
+
 .light_icon::before {
   font-family: "Font Awesome 7 Free";
   font-weight: 900;
@@ -402,6 +441,30 @@ a:active {
   z-index: 6;
 
 }
+
+.linkedin::before { 
+  font-family: "Font Awesome 7 Brands";
+  font-weight: 400;
+  font-style: normal;
+  content:"\f08c" 
+
+}
+
+.github::before{
+  font-family: "Font Awesome 7 Brands";
+  font-weight: 400;
+  font-style: normal;
+  content: "\f09b"
+}
+
+.email::before{
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-style: normal;
+  content: "\f0e0"
+}
+
+
 i.icon light_icon:hover, i.icon light_icon:focus{
   /* add hover effects like transform or filter to your images here! */
   /*transform: rotate(3deg)  */ /* i don't love the rotate effect -- change? */
