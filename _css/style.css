@@ -37,6 +37,7 @@
 --laptop: url(../_assets/laptop_dark.png);
 --shelfFront: var(--red2d);
 --contact_bg: url(../_assets/contact_bg_dark.png);
+--info_books: url(../_assets/info_test_2.png);
 }
 
 [data-theme="light"]{
@@ -69,7 +70,7 @@
 --outlet: url(../_assets/cord_light.png);
 --laptop: url(../_assets/laptop_light.png);
 --shelfFront: var(--red2l);
---contact_bg: url(../_assets/contact_bg_light.png);
+--contact_bg: url(../_assets/contact_bg_light_test.png);
 
 
 }
@@ -85,6 +86,16 @@
   left: 75vw;
   bottom: 27vw;
  /* box-shadow: 0px 4px 4px rgba(0,0,0,0.3); */
+}
+
+#site_info {
+  background-image: var(--info_books);
+  background-size: contain;
+  position: absolute;
+  width: 6.27vw;
+  height: 5vw;
+  left: 20vw;
+  bottom: 8.9vw;
 }
 
 #map{
@@ -236,18 +247,14 @@ div::after{
 }
 
 #shelf_shadow_v_d{
-  background-color: var(--shadow);
-  position: fixed;
   width: 2.5vw;
-  height: 27vw;
+  height: 23.7vw;
   left: 14.5vw;
-  bottom: 4vw;
+  bottom: 7.5vw;
   transform: skewY(340deg);
 }
 
 #shelf_shadow_h_d{
-  background-color: var(--shadow);
-  position: fixed;
   width: 32.6vw;
   height: 7vw;
   left: 10.8vw;
@@ -268,8 +275,6 @@ div::after{
 
 
 #shelf_shadow_v_l{
-  background-color: var(--shadow);
-  position: fixed;
   width: 2.5vw;
   height: 23.82vw;
   left: 47.6vw;
@@ -279,8 +284,6 @@ div::after{
 }
 
 #shelf_shadow_h_l{
-  background-color: var(--shadow);
-  position: fixed;
   width: 32.1vw;
   height: 1.5vw;
   left: 17.5vw;
@@ -311,6 +314,12 @@ div::after{
   height: auto;
   top: 5vw;
   right: 8vw;
+}
+
+.shadow {
+  background-color: var(--shadow);
+  opacity: 0.9;
+  position: fixed;
 }
 
 .elem{

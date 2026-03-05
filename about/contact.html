@@ -20,7 +20,7 @@
 
 
   <main>
-
+  <body onload='setTheme()'>
      <a class="home" href="../index.html" style="top: 2vw;"> go home</a>
      <a class='elem' onclick='toggleTheme()' style="left: 12.5vw; top: 2.1vw;"> 
       <i class="icon light_icon"></i>
@@ -30,11 +30,17 @@
     <style>
         
     .container{
-        display: grid;
-        grid-template-columns: 23vw 23vw 23vw;
-        grid-template-rows: auto;
+      display: grid;
+      grid-template-columns: 23vw 23vw 23vw;
+      grid-template-rows: auto;
+    }
 
-}
+    .icon.email {
+      color: var(--visitedlink);
+    }
+    .icon.email:hover {
+      color: var(--hoverlink);
+    }
 
     </style>
 
@@ -43,9 +49,10 @@
     <div class="container" style="position: absolute; left: 20vw; top: 15vw; font-size: 13vw;">
         <a class="icon linkedin" href="https://www.linkedin.com/in/ali-kyrouz/" target="_blank"></a>
         <a class="icon github" href="https://github.com/alikyrouz" target="_blank"></a>
-        <a class="icon email" href="mailto:ajkyrouz@gmail.com"></a>  
+        <a class="icon email" href="mailto:ajkyrouz@gmail.com"></a>
     </div>
-
+  
+  </body>
 
   </main>
 

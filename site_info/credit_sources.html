@@ -5,18 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="../_css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+    <link href="/_assets/font-awesome/css/solid.css" rel="stylesheet" /> <!-- DO NOT REFERENCE font-awesome.css-->
+    <script src="../themeToggle.js"></script>
+    <style>
+     body{background-color: var(--about_bg);}</style>
   </head>
-  <body>
-    here's a <a href="site_map.html"> site map</a>!
 
-    images: 
-    <a href="https://architextures.org/textures/1957">rug</a>
-    unless otherwise stated, images are from wikimedia commons :)
+  <body onload="setTheme()">
 
-    inspiration (and a little bit of code) from <a href="https://ribo.zone">ribo.zone</a>. 
-    thank you for helping me avoid having the worst personal website ever 
+     <a id='imgbg' role="presentation" style="position: absolute; display: block; background-color: var(--imgbg); width: 75vw; height: 40vw; top: 6.5vw; right: 15vw; border-radius: 0.5vw; z-index: -1;">
+  </a>
 
-    <a href="../index.html"> go home</a>
+   <p style="position: absolute; width: 42vw;  top: 9vw; left: 12vw; font-size: 1.8vw"> In case you missed it, here's a <a href="site_map.html"> site map</a>! (or there will be soon)
+    </p>
+
+  <p style = "position: absolute; width: 72vw;  top: 13vw; left: 12vw; font-size: 1.8vw">
+    Inspiration (and a little bit of code for hover effects) from <a href="https://ribo.zone">ribo.zone</a>. 
+    Thank you for motivating me to improve on my personal website! I think your vibes are so cool.
+</p>
+<p style = "position: absolute; width: 72vw;  top: 18vw; left: 12vw; font-size: 1.8vw">
+    All images are from <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons </a> or my own. Editing is done myself in GIMP 3 and Aseprite. Unless otherwise stated, all code is handwritten.
+</p>
+
+<p style = "position: absolute; width: 72vw;  top: 23vw; left: 12vw; font-size: 1.8vw">
+  Believe it or not, most web development skills are not formally taught as part of a Data Science degree program. This website began as one of my first projects involving HTML, CSS, JavaScript, UX/UI, and image editing/pixel art. I was super inspired by people in communities like <a href="https://32bit.cafe">32bit.cafe</a>, so I began working on this site in late spring, early summer of 2025 to replace my previous site built from a template. I like this project as a creative pursuit and a means to have a website with a little more personal identity.
+  </p>
+
+<p style = "position: absolute; width: 70vw;  top: 35vw; left: 12vw; font-size: 1.8vw">
+  As may be obvious, this entire site is hosted through GitHub Pages.
+</p>
+
+<p style="position: absolute; top: 40vw; width: 72vw;left: 12vw;">
+    If you want, you can also learn more <a href='../about/about.html'>about me</a>. 
+    
+    </p>
+    
+   <a class="home" href="../index.html">  go home</a>
+
+    <a class='elem' onclick='toggleTheme()' style="left: 12.5vw; top: 2.1vw;"> 
+      <i class="icon light_icon"></i>
+    </a>
   </body>
 
 </html>
