@@ -158,4 +158,7 @@ theme = 'cactus'
   [[params.socialLinks]]
     icon = "mail"
     link = "mailto:ajkyrouz@gmail.com"
-  
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
