@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Cactus on alison kyrouz</title>
+		<link>http://localhost:1313/tags/cactus/</link>
+		<description>Recent content in Cactus on alison kyrouz</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/cactus/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Hello World (almost not a test)</title>
+				<link>http://localhost:1313/posts/hello-world/</link>
+				<pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/hello-world/</guid>
+				<description>&lt;h2 id=&#34;hi&#34;&gt;hi&lt;/h2&gt;&#xA;&lt;p&gt;Things I have been meaning to write:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;a&lt;/li&gt;&#xA;&lt;li&gt;b&lt;/li&gt;&#xA;&lt;li&gt;c&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
+</rss>

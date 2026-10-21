@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+  
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="Search">
+<meta property="og:url" content="http://localhost:1313/posts/search/">
+<meta property="og:site_name" content="ali kyrouz">
+
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Search">
+
+
+
+  
+
+  <link rel="shortcut icon" href="/images/favicon_city.ico"><link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <title>Search</title>
+
+  
+  
+  
+
+  
+  
+  
+    
+    <link rel="stylesheet" href="/scss/style.34b285e5f8ae3291191b76ac777ef7531ba235ea78d5eec941be052918b68bd2.css" integrity="sha256-NLKF5fiuMpEZG3asd373UxuiNep41e7JQb4FKRi2i9I=">
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+</head>
+<body class="max-width mx-auto px3 ltr">
+  <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="return cactusScrollTop();" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/posts/">Writing</a></li><li><a href="https://github.com/alikyrouz">Projects</a></li><li><a href="/search/">Search</a></li></ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/posts/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="cactusToggle('i-next');" onmouseout="cactusToggle('i-next');"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="return cactusScrollTop();"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="cactusToggle('i-top');" onmouseout="cactusToggle('i-top');"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="cactusToggle('i-share');" onmouseout="cactusToggle('i-share');" onclick="cactusToggle('share');return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&text=Search"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&is_video=false&description=Search"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Search&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&name=Search&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&t=Search"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+  </span>
+</div>
+
+  <div class="content index py4 ">
+    
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="content" itemprop="articleBody">
+    <section id="search">
+  <form>
+    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+  </form>
+  <div id="search-result"></div>
+  <p class="search-no-result">No results found.</p>
+</section>
+
+  </div>
+</article>
+
+    <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/posts/">Writing</a></li><li><a href="https://github.com/alikyrouz">Projects</a></li><li><a href="/search/">Search</a></li></ul>
+    </div>
+
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&text=Search"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&is_video=false&description=Search"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Search&body=Check out this article: http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&title=Search"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&name=Search&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fsearch%2f&t=Search"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <a id="menu" class="icon" href="#" onclick="cactusToggle('nav-footer');return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+      
+      <a id="share" class="icon" href="#" onclick="cactusToggle('share-footer');return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+      <a id="top" style="display:none" class="icon" href="#" onclick="return cactusScrollTop();"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    2026
+    Ali Kyrouz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/posts/">Writing</a></li><li><a href="https://github.com/alikyrouz">Projects</a></li><li><a href="/search/">Search</a></li></ul>
+    </nav>
+  </div>
+</footer>
+
+  </div>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"><link rel="stylesheet" href="/css/site.min.408f4a7bed8323a0d36eb3255a3fd66c6cf174b79ac28bf052c252ee13d4e148.css" integrity="sha256-QI9Ke&#43;2DI6DTbrMlWj/WbGzxdLeawovwUsJS7hPU4Ug=">
+
+  
+<script>window.cactusI18n = {copyTip: "\"Copy to clipboard!\"", copied: "\"Copied!\""};</script>
+
+
+  
+  <script src="/js/main.db8cc9f2518a7ce9c6349893b6ffaaa94f192097d21d731fb769ebf8ae828987.js"></script>
+
+
+
+
+  
+    
+    <script src="/js/search.5ed52cdd956021fd7194109b25dbc5cbe93a1085461b9f29b1284df94c19481c.js"></script>
+  
+  <script>
+  (function () {
+    var input = document.getElementById('search-input');
+    if (!input) return;
+    var result = document.getElementById('search-result');
+    var noResult = document.querySelector('.search-no-result');
+    var bound = false;
+    input.addEventListener('focus', function () {
+      if (bound) return;
+      bound = true;
+      searchFunc("\/index.json", 'search-input', 'search-result');
+    });
+    input.addEventListener('keydown', function (e) { if (e.which === 13) e.preventDefault(); });
+    if (result) {
+      var observer = new MutationObserver(function (list) {
+        if (list.length === 1) {
+          if (list[0].addedNodes.length) { if (noResult) noResult.style.display = 'none'; }
+          else if (list[0].removedNodes.length) { if (noResult) noResult.style.display = ''; }
+        }
+      });
+      observer.observe(result, { childList: true });
+    }
+  })();
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

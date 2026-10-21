@@ -1,0 +1,4 @@
+{{- /* Keep the theme's icon stylesheet and layer site-specific styles after it. */ -}}
+{{ partial "cdn.html" (dict "resource" "fontAwesome" "type" "link" "preload" true "local" "/lib/font-awesome/css/all.min.css") }}
+{{- $customStyles := resources.Get "css/site.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $customStyles.RelPermalink }}" integrity="{{ $customStyles.Data.Integrity }}">
