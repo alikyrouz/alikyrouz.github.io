@@ -5,7 +5,7 @@ tags: ["music"]
 ---
 
 # Tennis with Kate Bollinger at the House of Blues
-Originally published as part of [Concert Coverage](/all-blogs/category/Concert%20Coverage) by WZLY 91.5 FM
+Originally published as part of [Concert Coverage](https://www.wzly.org/concerts) by WZLY 91.5 FM
 
 ![](https://images.squarespace-cdn.com/content/v1/5fae98e97c80332018fa0604/efe6c1e1-23a5-4b6e-85b2-df28aab8398d/IMG_0936.JPG)
 
